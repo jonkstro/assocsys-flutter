@@ -6,9 +6,12 @@ class CustomColorScheme {
   static const lightTheme = ColorScheme.light(
     primary: Constantes.corFundoLogo,
     surfaceTint: Constantes.surfaceTintLight,
+    error: Colors.red,
   );
   // dark
   static const darkTheme = ColorScheme.dark(
-      primary: Constantes.corFundoLogo,
-      surfaceTint: Constantes.surfaceTintDark);
+    primary: Constantes.corFundoLogo,
+    surfaceTint: Constantes.surfaceTintDark,
+    error: Colors.red,
+  );
 }

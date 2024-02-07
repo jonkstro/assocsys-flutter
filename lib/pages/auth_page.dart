@@ -20,8 +20,10 @@ class AuthPage extends StatelessWidget {
             end: Alignment.bottomCenter,
           ),
         ),
-        child: const Center(
-          child: AuthFormWidget(),
+        child: Center(
+          child: SingleChildScrollView(
+            child: AuthFormWidget(),
+          ),
         ),
       ),
     );

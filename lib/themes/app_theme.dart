@@ -1,55 +1,36 @@
 import 'package:assocsys/themes/custom/custom_colorscheme.dart';
+import 'package:assocsys/themes/custom/custom_elevatedbutton_theme.dart';
 import 'package:assocsys/themes/custom/custom_text_theme.dart';
 import 'package:flutter/material.dart';
 
 class AppTheme {
+  static const String _fontFamily = 'Open Sans';
   // light
-  static final lightTheme = ThemeData(
-    fontFamily: 'Open Sans',
-    textTheme: CustomTextTheme.lightTheme,
-    colorScheme: CustomColorScheme.lightTheme,
-
-    useMaterial3: true,
-
-    // ...
-  );
-
-  // dark
-  static final darkTheme = ThemeData(
-    fontFamily: 'Open Sans',
-    textTheme: CustomTextTheme.darkTheme,
-    colorScheme: CustomColorScheme.darkTheme,
-
-    useMaterial3: true,
-
-    // ...
-  );
-}
-
-/**
- class MyAppTheme {
-  // light
-  static final lightTheme = ThemeData(
-    appBarTheme: CustomAppBarTheme.lightAppBarTheme,
-    scaffoldBackgroundColor: Colors.white,
+  static final lightTheme = _customThemeData(
     textTheme: CustomTextTheme.lightTheme,
     colorScheme: CustomColorScheme.lightTheme,
     elevatedButtonTheme: CustomElevatedButtonTheme.lightTheme,
-    // textButtonTheme: ,
-    // primaryTextTheme: ,
-    // textSelectionTheme: ,
-    // elevatedButtonTheme: ,
+  );
 
-    useMaterial3: true,
-  );
   // dark
-  static final darkTheme = ThemeData(
-    appBarTheme: CustomAppBarTheme.darkAppBarTheme,
-    scaffoldBackgroundColor: Colors.black,
+  static final darkTheme = _customThemeData(
     textTheme: CustomTextTheme.darkTheme,
-    elevatedButtonTheme: CustomElevatedButtonTheme.darkTheme,
     colorScheme: CustomColorScheme.darkTheme,
-    useMaterial3: true,
+    elevatedButtonTheme: CustomElevatedButtonTheme.darkTheme,
   );
+  static ThemeData _customThemeData({
+    TextTheme? textTheme,
+    ColorScheme? colorScheme,
+    ElevatedButtonThemeData? elevatedButtonTheme,
+  }) {
+    return ThemeData(
+      fontFamily: _fontFamily,
+      useMaterial3: true,
+      textTheme: textTheme,
+      colorScheme: colorScheme,
+      elevatedButtonTheme: elevatedButtonTheme,
+
+      // Adicionar mais configurações ...
+    );
+  }
 }
- */

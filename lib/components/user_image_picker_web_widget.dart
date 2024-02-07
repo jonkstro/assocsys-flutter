@@ -16,7 +16,7 @@ class UserImagePickerWebWidget extends StatefulWidget {
 
 class _UserImagePickerWebWidgetState extends State<UserImagePickerWebWidget> {
   // web image
-  Uint8List _webImage = Uint8List(8);
+  Uint8List? _webImage = Uint8List(8);
 
   // Pegar imagem da galeria
   Future<void> _pickImage() async {
@@ -29,14 +29,12 @@ class _UserImagePickerWebWidgetState extends State<UserImagePickerWebWidget> {
     );
     // se não escolher nenhuma imagem vai acabar aqui
     if (pickedImage == null) return;
-    // tirar mounted se der erro!!!!!!
-    if (mounted) {
-      final file = await pickedImage.readAsBytes();
-      setState(() {
-        _webImage = file;
-      });
-      widget.onImagePick(_webImage);
-    }
+
+    final file = await pickedImage.readAsBytes();
+    setState(() {
+      _webImage = file;
+    });
+    widget.onImagePick(_webImage!);
   }
 
   @override
@@ -46,7 +44,7 @@ class _UserImagePickerWebWidgetState extends State<UserImagePickerWebWidget> {
         CircleAvatar(
           radius: 40,
           backgroundColor: Colors.grey,
-          backgroundImage: MemoryImage(_webImage),
+          backgroundImage: _webImage != null ? MemoryImage(_webImage!) : null,
         ),
         TextButton.icon(
           icon: Icon(

@@ -31,13 +31,11 @@ class _UserImagePickerStateMobileWidget
     );
     // se não escolher nenhuma imagem vai acabar aqui
     if (pickedImage == null) return;
-    // tirar mounted se der erro!!!!!!
-    if (mounted) {
-      setState(() {
-        _mobileImage = File(pickedImage.path);
-      });
-      widget.onImagePick(_mobileImage!);
-    }
+
+    setState(() {
+      _mobileImage = File(pickedImage.path);
+    });
+    widget.onImagePick(_mobileImage!);
   }
 
   @override
