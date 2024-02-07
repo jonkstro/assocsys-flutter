@@ -11,6 +11,7 @@ class AuthPage extends StatelessWidget {
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
+            // TODO: Se for para monitor vai ser branco e vai ter ao lado o shark.png
             colors: [
               Constantes.corFundoLogo,
               Colors.blue,

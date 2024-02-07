@@ -1,3 +1,4 @@
+import 'package:assocsys/themes/custom/custom_colorscheme.dart';
 import 'package:assocsys/themes/custom/custom_text_theme.dart';
 import 'package:flutter/material.dart';
 
@@ -6,6 +7,8 @@ class AppTheme {
   static final lightTheme = ThemeData(
     fontFamily: 'Open Sans',
     textTheme: CustomTextTheme.lightTheme,
+    colorScheme: CustomColorScheme.lightTheme,
+
     useMaterial3: true,
 
     // ...
@@ -15,6 +18,8 @@ class AppTheme {
   static final darkTheme = ThemeData(
     fontFamily: 'Open Sans',
     textTheme: CustomTextTheme.darkTheme,
+    colorScheme: CustomColorScheme.darkTheme,
+
     useMaterial3: true,
 
     // ...
