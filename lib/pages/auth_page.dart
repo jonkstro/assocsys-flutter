@@ -1,10 +1,11 @@
 import 'package:assocsys/components/auth_form_widget.dart';
+import 'package:assocsys/core/models/auth_model.dart';
 import 'package:assocsys/utils/constantes.dart';
 import 'package:flutter/material.dart';
 
 class AuthPage extends StatelessWidget {
   const AuthPage({super.key});
-
+  Future<void> _handleSubmit(AuthModel authData) async {}
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +23,9 @@ class AuthPage extends StatelessWidget {
         ),
         child: Center(
           child: SingleChildScrollView(
-            child: AuthFormWidget(),
+            child: AuthFormWidget(
+              onSubmit: _handleSubmit,
+            ),
           ),
         ),
       ),

@@ -10,8 +10,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class AuthFormWidget extends StatefulWidget {
-  // Método que vai vir do AuthPage
-  final Future<void> onSubmit;
+  // Metodo que vai vir do componente pai que vai executar no submit
+  final Future<void> Function(AuthModel) onSubmit;
   const AuthFormWidget({super.key, required this.onSubmit});
 
   @override
