@@ -42,8 +42,7 @@ dependencies:
   provider: ^6.1.1
   dotenv: ^4.2.0
   flutter_dotenv: ^5.1.0
-  # vercel:
-  web: ^0.3.0
+
 
 dev_dependencies:
   flutter_test:
