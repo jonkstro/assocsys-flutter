@@ -1,4 +1,4 @@
-import 'package:assocsys/pages/auth_page.dart';
+import 'package:assocsys/pages/auth_or_app_page.dart';
 import 'package:assocsys/themes/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
@@ -27,18 +27,20 @@ class MyApp extends StatelessWidget {
     _localeDateTime;
 
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: AppTheme.lightTheme,
-      darkTheme: AppTheme.darkTheme,
-      home: AuthPage(),
       // Configuração dos DatePicker e TimePickers e outros (calendario, moedas)
       localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
       ],
+      // devem ambos ser configurado antes do home
       supportedLocales: const [
         Locale('pt', 'BR')
       ], // Adicione o locale desejado
+      title: 'AssocSys',
+      theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
+      home: const AuthOrAppPage(),
     );
   }
 }

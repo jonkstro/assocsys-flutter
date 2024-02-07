@@ -10,7 +10,7 @@ class CustomColorScheme {
   );
   // dark
   static const darkTheme = ColorScheme.dark(
-    primary: Constantes.corFundoLogo,
+    primary: Constantes.buttonDark,
     surfaceTint: Constantes.surfaceTintDark,
     error: Colors.red,
   );
