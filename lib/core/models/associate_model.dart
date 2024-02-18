@@ -7,6 +7,7 @@ class AssociateModel {
   final String password;
   final String imageUrl;
   final String registrationDate;
+  bool isActive;
 
   AssociateModel({
     required this.id,
@@ -17,5 +18,6 @@ class AssociateModel {
     required this.password,
     required this.imageUrl,
     required this.registrationDate,
+    required this.isActive,
   });
 }

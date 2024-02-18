@@ -69,14 +69,20 @@ class AuthMockService implements AuthService {
       // se não receber a imagem do formData vai botar uma imagem padrão
       imageUrl: image?.path ?? 'assets/images/avatar.png',
       registrationDate: registrationDate.toIso8601String(),
+      isActive: false,
     );
 
     // putIfAbsent == se não tiver o email cadastrado vai adicionar, senão não.
     _associates.putIfAbsent(email, () => newUser);
     // Fazer login após registrar, pode mudar se quiser seguir outra lógica
     _updateUser(newUser); // Setar o user atual como o que foi criado
-    print(_associates);
-    print(newUser.id);
+  }
+
+  // Simular ativação do usuário após verificação do email
+  @override
+  Future<void> activateUser(AssociateModel user) async {
+    user.isActive = true;
+    _updateUser(user);
   }
 
   static void _updateUser(AssociateModel? user) {

@@ -281,7 +281,8 @@ class _AuthFormWidgetState extends State<AuthFormWidget> {
                 visible: !_isLoading,
                 replacement: const CircularProgressIndicator(),
                 child: AdaptativeButtonWidget(
-                  label: 'Registrar Associado',
+                  label:
+                      _formData.isLogin ? 'Fazer Login' : 'Registrar Associado',
                   onPressed: () => _submitForm(),
                 ),
               ),

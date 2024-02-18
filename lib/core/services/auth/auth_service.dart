@@ -22,6 +22,8 @@ abstract class AuthService {
   );
   Future<void> logout();
 
+  Future<void> activateUser(AssociateModel user);
+
   factory AuthService() {
     return AuthMockService();
   }

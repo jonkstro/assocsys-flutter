@@ -58,7 +58,9 @@ class AdaptativeDatePickerWidget extends StatelessWidget {
                   _showDatePicker(context);
                 },
                 child: Text(
-                  'Selecione outra data',
+                  selectedDate == null
+                      ? 'Escolha uma data'
+                      : 'Selecione outra data',
                   style: TextStyle(
                       fontSize:
                           Theme.of(context).textTheme.bodyMedium?.fontSize,
