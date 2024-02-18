@@ -4,7 +4,6 @@ class AssociateModel {
   final String registrationNumber;
   final String birthDate;
   final String email;
-  final String password;
   final String imageUrl;
   final String registrationDate;
   bool isActive;
@@ -15,7 +14,6 @@ class AssociateModel {
     required this.registrationNumber,
     required this.birthDate,
     required this.email,
-    required this.password,
     required this.imageUrl,
     required this.registrationDate,
     required this.isActive,

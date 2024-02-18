@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "367952465851",
+    "project_id": "assocsys-163de",
+    "storage_bucket": "assocsys-163de.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:367952465851:android:4d3881388cbe2ed3dafe9e",
+        "android_client_info": {
+          "package_name": "br.com.assocsys"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhU5al5pHiTFsJLwxvTUQWYdSsyTpNnYk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

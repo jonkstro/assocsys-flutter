@@ -65,7 +65,6 @@ class AuthMockService implements AuthService {
       registrationNumber: registrationNumber,
       birthDate: birthDate.toIso8601String(),
       email: email,
-      password: password,
       // se não receber a imagem do formData vai botar uma imagem padrão
       imageUrl: image?.path ?? 'assets/images/avatar.png',
       registrationDate: registrationDate.toIso8601String(),

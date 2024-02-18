@@ -1,14 +1,11 @@
 import 'package:assocsys/pages/auth_or_app_page.dart';
 import 'package:assocsys/themes/app_theme.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:intl/date_symbol_data_local.dart';
 // Necessário para user DatePicker
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-void main() async {
-  // Inicializar o pacote dotenv carregando as variáveis de ambiente
-  await dotenv.load(fileName: '.env');
+void main() {
   runApp(const MyApp());
 }
 

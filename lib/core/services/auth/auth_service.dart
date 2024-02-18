@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:assocsys/core/models/associate_model.dart';
+import 'package:assocsys/core/services/auth/auth_firebase_service.dart';
 import 'package:assocsys/core/services/auth/auth_mock_service.dart';
 
 abstract class AuthService {
@@ -25,6 +26,7 @@ abstract class AuthService {
   Future<void> activateUser(AssociateModel user);
 
   factory AuthService() {
-    return AuthMockService();
+    // return AuthMockService();
+    return AuthFirebaseService();
   }
 }

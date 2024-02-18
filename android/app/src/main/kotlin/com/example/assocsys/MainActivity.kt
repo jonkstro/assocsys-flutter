@@ -1,4 +1,4 @@
-package com.example.assocsys
+package br.com.assocsys
 
 import io.flutter.embedding.android.FlutterActivity
 
