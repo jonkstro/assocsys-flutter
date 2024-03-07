@@ -79,9 +79,9 @@ class AuthMockService implements AuthService {
 
   // Simular ativação do usuário após verificação do email
   @override
-  Future<void> activateUser(AssociateModel user) async {
-    user.isActive = true;
-    _updateUser(user);
+  Future<void> activateUser() async {
+    // _currentUser.isActive = true;
+    // _updateUser(user);
   }
 
   static void _updateUser(AssociateModel? user) {

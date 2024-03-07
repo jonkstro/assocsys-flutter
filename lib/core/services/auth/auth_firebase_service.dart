@@ -28,7 +28,7 @@ class AuthFirebaseService implements AuthService {
     await FirebaseAuth.instance.signInWithEmailAndPassword(
       email: email,
       password: password,
-      // TODO: Adicionar sharedpreferences pra poder continuar ou não logado.
+      //TODO: Adicionar sharedpreferences pra poder continuar ou não logado.
     );
   }
 
@@ -82,14 +82,15 @@ class AuthFirebaseService implements AuthService {
         registrationDate.toIso8601String(),
       );
       await _saveAssociateOnDb(_currentUser!);
+      await activateUser();
     }
     // Remove a instância Firebase inicializada anteriormente para liberar recursos.
     await signup.delete();
   }
 
   @override
-  Future<void> activateUser(AssociateModel user) {
-    throw UnimplementedError();
+  Future<void> activateUser() async {
+    await FirebaseAuth.instance.currentUser?.sendEmailVerification();
   }
 
   static Future<AssociateModel> _toAssociate(

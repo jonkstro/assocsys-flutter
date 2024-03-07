@@ -1,3 +1,4 @@
+import 'package:assocsys/components/error_snackbar.dart';
 import 'package:assocsys/core/models/associate_model.dart';
 import 'package:assocsys/core/services/auth/auth_service.dart';
 import 'package:flutter/material.dart';
@@ -28,7 +29,13 @@ class EmailValidationPage extends StatelessWidget {
           ElevatedButton.icon(
             icon: const Icon(Icons.email),
             label: const Text('Verificar o email'),
-            onPressed: () => AuthService().activateUser(user),
+            onPressed: () {
+              try {
+                AuthService().activateUser();
+              } catch (error) {
+                return ErrorSnackbar.show(context, error.toString());
+              }
+            },
           ),
         ],
       ),
